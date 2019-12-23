@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Trello Card Mature",
+  "version": "1.0.0",
+  "description": "Show card mature by last activity",
+  "icons": { "128": "trello-mature128.png" },
+  "content_scripts": [{
+    "run_at" :"document_end",
+    "matches": ["https://trello.com/*"],
+    "js": ["trello-mature.js"],
+    "css": ["trello-mature.css"]
+  }],
+  "web_accessible_resources": ["trello-mature128.png"],
+  "author": "goldblade",
+  "permissions": ["tabs", "storage", "https://trello.com/b/*"]
+}
